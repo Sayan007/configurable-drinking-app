@@ -3,9 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-// import { Header } from './header/header';
-// import { Footer } from './footer/footer';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -19,7 +18,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideHttpClient(withInterceptorsFromDi())
+    provideHttpClient(withInterceptorsFromDi()),
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [App]
 })
