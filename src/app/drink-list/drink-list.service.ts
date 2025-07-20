@@ -1,0 +1,15 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Settings } from '../../environments/settings.dev';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class DrinkListService {
+  constructor(private httpClient: HttpClient) { }
+
+  getAllDrinks(path: string): Observable<any> {
+    return this.httpClient.get(Settings.api + path)
+  }
+}

@@ -1,0 +1,125 @@
+.content{
+  display: flex;
+  justify-content: space-evenly;
+  // flex-wrap: wrap;
+  margin: 5% 0%;
+  padding: 0% 5%;
+}
+
+.image-container{
+  img{
+    width: 350px;
+  }
+}
+
+.drink-details{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0.7;
+  margin-left: 2%;
+  label.title{
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 1%;
+  }
+}
+
+.category-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top:1%;
+  // justify-content: space-between;
+  
+}
+
+.single-cat-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  margin-right: 2%;
+  min-width: 135px;
+  .type-text{
+    margin-left:1%;
+  }
+  mat-icon{
+    cursor: pointer;
+  }
+}
+
+.instruction-container{
+  display: flex;
+  flex-wrap: wrap;
+  text-wrap: auto;
+  overflow-wrap: break-word;
+  // text-wrap-style: balance;
+  padding:1%;
+  p{
+    font-size: 20px;
+  }
+}
+
+.title-container{
+  display: flex;
+  justify-content: space-between;
+
+}
+@media only screen and (max-width: 450px) {
+  .instruction-container{
+    display: flex;
+    flex-wrap: wrap;
+    text-wrap: auto;
+    overflow-wrap: break-word;
+    text-wrap-style: balance;
+    padding:1%;
+  }
+
+  .single-cat-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-right: 2%;
+    min-width: 130px;
+  }
+
+  .category-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:1%;
+    // justify-content: space-between;
+  }
+
+  .drink-details{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0.7;
+    label.title{
+      font-size: 3em;
+      font-weight: bold;
+      margin-bottom: 3%;
+      margin-top: 6%;
+      height: 80px;
+      line-height: 1;
+      padding: 1%;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) and (min-width: 450px)  {
+  .drink-details{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0.7;
+    label.title{
+      font-size: 3em;
+      font-weight: bold;
+      margin-top: 3%;
+      height: 55px;
+      line-height: 1;
+      padding: 1%;
+    }
+  }
+}

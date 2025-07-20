@@ -1,0 +1,35 @@
+.drink-card {
+  margin: 1%;
+  width: 350px;
+}
+
+.drink-card-image {
+  background-size: cover;
+}
+
+.content{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2% 0%;
+}
+
+.drink-title{
+  font-size: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mat-mdc-card-header {
+    display: flex;
+    padding: 16px 16px 16px !important;
+}
+.mat-mdc-card-header-text{
+  justify-content: center;
+  display: flex;
+  flex-grow: 1;
+}
+
+.mdc-button__label{
+  font-size: 15px;
+}
