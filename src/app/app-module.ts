@@ -4,7 +4,8 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+// import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -13,13 +14,14 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatToolbarModule
+    MatToolbarModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideHttpClient(withInterceptorsFromDi()),
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    // { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [App]
 })

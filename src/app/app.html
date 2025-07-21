@@ -1,12 +1,12 @@
-<div class="container">
+<div class="container" [style]="{'font-family': config.siteSettings.fontFamily}">
   <div class="header" [style]="{'background': config.theme.primaryColor}">
     <img class="logo" src="{{config.siteSettings.logoUrl}}" [style]="{'width': config.siteSettings.logoWidth}">
-    <div class="title-container"><span>{{config.siteSettings.title}}</span></div>
+    <div class="title-container" [style]="{'color': config.theme.titleColor}"><span>{{config.siteSettings.title}}</span></div>
   </div>
   <div class="outer-content">
     <router-outlet></router-outlet>
   </div>
   <div class="footer" [style]="{'background': config.theme.secondaryColor}">
-    <h4 class="footer-text">{{config.siteSettings.copyrightText}}{{config.siteSettings.copyrightYear}}</h4>
+    <h4 class="footer-text" [style]="{'color': config.siteSettings.copyrightTextColor}">{{config.siteSettings.copyrightText}}{{config.siteSettings.copyrightYear}}</h4>
   </div>
 </div>

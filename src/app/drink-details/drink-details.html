@@ -1,10 +1,10 @@
 <div class="content">
-  <div class="image-container">
-    <img src="{{drinkDetails['strDrinkThumb']}}" alt="{{drinkDetails['strDrink']}}">
-  </div>
-  <div class="drink-details">
-    <div class="title-container">
-      <label class="title">{{drinkDetails.strDrink}}</label>
+  <div class="content-header">
+    <div class="back-button" [style]="{'background-color': config.theme.secondaryColor}">
+      <mat-icon aria-hidden="false" routerLink="/drink-list" aria-label="arrow_backward" fontIcon="arrow_backward"></mat-icon>
+      <span routerLink="/drink-list">Go Back</span>
+    </div>
+    <div class="translation-container">
       <mat-form-field>
         <mat-label>Select Language</mat-label>
         <mat-select [(value)]="language">
@@ -16,44 +16,53 @@
         </mat-select>
       </mat-form-field>
     </div>
-    
-    <div class="category-container">
-      <div class="single-cat-details">
-        <mat-icon aria-hidden="false" aria-label="local_drink" fontIcon="local_drink" title="Mug Type"></mat-icon>
-        <span class="type-text">{{drinkDetails['strGlass']}}</span>
-      </div>
-      <div class="single-cat-details" *ngIf="drinkDetails['strAlcoholic'] == 'Alcoholic'">
-        <mat-icon aria-hidden="false" aria-label="local_bar" fontIcon="local_bar" title="Drink Type"></mat-icon>
-        <span class="type-text">{{drinkDetails['strAlcoholic']}}</span>
-      </div>
-      <div class="single-cat-details" *ngIf="drinkDetails['strAlcoholic'] != 'Alcoholic'">
-        <mat-icon aria-hidden="false" aria-label="no_drinks" fontIcon="no_drinks" title="Drink Type"></mat-icon>
-        <span class="type-text">{{drinkDetails['strAlcoholic']}}</span>
-      </div>
-      <div class="single-cat-details">
-        <mat-icon aria-hidden="false" aria-label="liquor" fontIcon="liquor" title="Drink Category"></mat-icon>
-        <span class="type-text">{{drinkDetails['strCategory']}}</span>
-      </div>
-      <div class="single-cat-details">
-        <mat-icon aria-hidden="false" aria-label="date_range" fontIcon="date_range" title="Modified On"></mat-icon>
-        <span class="type-text">{{drinkDetails['dateModified'] | date: config.siteSettings.dateFormat}}</span>
-      </div>
+  </div>
+  <div class="inner-content">
+    <div class="image-container">
+      <img src="{{drinkDetails['strDrinkThumb']}}" alt="{{drinkDetails['strDrink']}}">
     </div>
-    <div class="instruction-container">
-      <p>{{drinkDetails['strInstructions'+language]}}</p>
-    </div>
-    <div class="mixture-details">
-      <ul>
-        <ng-container *ngFor="let item of [].constructor(15); let i = index">
-          @if (drinkDetails['strIngredient'+(i+1)]) {
-            <li >{{drinkDetails['strIngredient'+(i+1)]}} 
-              @if(drinkDetails['strMeasure'+(i+1)]) {
-                - {{drinkDetails['strMeasure'+(i+1)]}}
-              }
-            </li>
-          }
-        </ng-container>
-      </ul>
+    <div class="drink-details">
+      <div class="title-container">
+        <label class="title">{{drinkDetails.strDrink}}</label>
+      </div>
+      <div class="category-container">
+        <div class="single-cat-details">
+          <mat-icon aria-hidden="false" aria-label="local_drink" fontIcon="local_drink" title="Mug Type" [style]="{'color': config.theme.thirdColor}"></mat-icon>
+          <span class="type-text">{{drinkDetails['strGlass']}}</span>
+        </div>
+        <div class="single-cat-details" *ngIf="drinkDetails['strAlcoholic'] == 'Alcoholic'">
+          <mat-icon aria-hidden="false" aria-label="local_bar" fontIcon="local_bar" title="Drink Type" [style]="{'color': config.theme.thirdColor}"></mat-icon>
+          <span class="type-text">{{drinkDetails['strAlcoholic']}}</span>
+        </div>
+        <div class="single-cat-details" *ngIf="drinkDetails['strAlcoholic'] != 'Alcoholic'">
+          <mat-icon aria-hidden="false" aria-label="no_drinks" fontIcon="no_drinks" title="Drink Type" [style]="{'color': config.theme.thirdColor}"></mat-icon>
+          <span class="type-text">{{drinkDetails['strAlcoholic']}}</span>
+        </div>
+        <div class="single-cat-details">
+          <mat-icon aria-hidden="false" aria-label="liquor" fontIcon="liquor" title="Drink Category" [style]="{'color': config.theme.thirdColor}"></mat-icon>
+          <span class="type-text">{{drinkDetails['strCategory']}}</span>
+        </div>
+        <div class="single-cat-details">
+          <mat-icon aria-hidden="false" aria-label="date_range" fontIcon="date_range" title="Modified On" [style]="{'color': config.theme.thirdColor}"></mat-icon>
+          <span class="type-text">{{drinkDetails['dateModified'] | date: config.siteSettings.dateFormat}}</span>
+        </div>
+      </div>
+      <div class="instruction-container">
+        <p>{{drinkDetails['strInstructions'+language]}}</p>
+      </div>
+      <div class="mixture-details">
+        <ul>
+          <ng-container *ngFor="let item of [].constructor(15); let i = index">
+            @if (drinkDetails['strIngredient'+(i+1)]) {
+              <li >{{drinkDetails['strIngredient'+(i+1)]}} 
+                @if(drinkDetails['strMeasure'+(i+1)]) {
+                  - {{drinkDetails['strMeasure'+(i+1)]}}
+                }
+              </li>
+            }
+          </ng-container>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

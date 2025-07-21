@@ -1,18 +1,22 @@
 export const Settings = {
   api: "https://www.thecocktaildb.com/api/json/v1/1/",
   theme: {
-    primaryColor: "teal",
-    secondaryColor: "skyblue",
-    thirdColor: "darkgoldenrod"
+    primaryColor: "black",
+    secondaryColor: "gold",
+    thirdColor: "darkblue",
+    titleColor: "#ffc200"
   },
   siteSettings: {
-    logoUrl: "assets/images/logo.png",
+    logoUrl: "assets/images/logo.svg",
     logoWidth: "64px",
-    title: "Drinking App",
+    title: "The Tippler's Guide",
     dateFormat: "dd-MMM-yyyy",
     currency: "SEK",
     companyName: "Eliq",
     copyrightYear: "2025",
-    copyrightText: "All rights reserved. Copyright year "
+    copyrightText: "All rights reserved. Copyright year ",
+    fontFamily: "didot",
+    copyrightTextColor: "black",
+    search: true
   }
 }

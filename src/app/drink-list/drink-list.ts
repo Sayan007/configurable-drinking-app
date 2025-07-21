@@ -15,6 +15,7 @@ export class DrinkList {
   public allDrinkingItems: DrinkListModel[] = [];
   public config: SettingsModel = Settings;
   private snackBar = inject(MatSnackBar);
+  public searchTerm: string = '';
 
   constructor(private drinkListService: DrinkListService, private cdr: ChangeDetectorRef) { }
 

@@ -6,7 +6,8 @@ export interface SettingsModel {
 interface Theme {
   primaryColor: string,
   secondaryColor: string,
-  thirdColor: string
+  thirdColor: string,
+  titleColor: string
 }
 interface SiteSettings {
   logoUrl: string,
@@ -16,5 +17,8 @@ interface SiteSettings {
   currency: string,
   companyName: string,
   copyrightYear: string,
-  copyrightText: string
+  copyrightText: string,
+  fontFamily: string;
+  copyrightTextColor: string;
+  search: boolean;
 }

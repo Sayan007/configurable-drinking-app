@@ -24,7 +24,7 @@
 }
 
 .logo, .footer-text{
-  margin: 1% 4%;
+  margin: 1% 1% 1% 4%;
 }
 
 .title-container {
@@ -33,5 +33,18 @@
   display: flex;
   span {
     font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .header {
+    display: flex;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding: 3px 5px;
+    flex-direction: column;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
   }
 }

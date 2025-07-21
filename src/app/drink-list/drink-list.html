@@ -1,27 +1,39 @@
+<ng-container *ngIf="config.siteSettings.search">
+  <form class="search-form">
+    <mat-form-field class="search-container">
+      <mat-label>Search By Drink Name</mat-label>
+      <input matInput placeholder="Search by name" name="searchTerm" [(ngModel)]="searchTerm" class="search-input">
+    </mat-form-field>
+  </form>
+  
+</ng-container>
 <div class="content">
-  <div class="card" *ngFor="let singleDrinkItem of allDrinkingItems">
-    <mat-card class="drink-card" appearance="outlined" >
-      <mat-card-header>
-        <!-- <div mat-card-avatar class="drink-card-image"></div> -->
-        <mat-card-title class="drink-title" [style]="{'color': config.theme.thirdColor}">{{singleDrinkItem.strDrink}}</mat-card-title>
-        <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
-      </mat-card-header>
-      <img mat-card-image src="{{singleDrinkItem.strDrinkThumb}}" alt="{{singleDrinkItem.strDrink}}">
-      <!-- <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
-      </mat-card-content> -->
-      <mat-card-actions>
-        <!-- <button matButton (click)="">Details</button> -->
-        <button routerLink="/drink-details/{{singleDrinkItem.idDrink}}" matButton [style]="{'color': config.theme.thirdColor}">
-          <mat-icon aria-hidden="false" aria-label="arrow_forward" fontIcon="arrow_forward"></mat-icon>
-          View More
-        </button>
-        <!-- <button matButton></button> -->
-      </mat-card-actions> 
-    </mat-card>
-  </div>
+  <ng-container *ngFor="let singleDrinkItem of allDrinkingItems">
+    <div class="card" *ngIf="!config.siteSettings.search || (config.siteSettings.search && searchTerm == '') || (config.siteSettings.search && searchTerm != '' && singleDrinkItem.strDrink.toLocaleLowerCase().includes(searchTerm.toLocaleLowerCase()))">
+      <mat-card class="drink-card" appearance="outlined" >
+        <mat-card-header>
+          <!-- <div mat-card-avatar class="drink-card-image"></div> -->
+          <mat-card-title class="drink-title" [style]="{'color': config.theme.thirdColor}">{{singleDrinkItem.strDrink}}</mat-card-title>
+          <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+        </mat-card-header>
+        <img mat-card-image src="{{singleDrinkItem.strDrinkThumb}}" alt="{{singleDrinkItem.strDrink}}">
+        <!-- <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content> -->
+        <mat-card-actions>
+          <!-- <button matButton (click)="">Details</button> -->
+          <button class="action-button" routerLink="/drink-details/{{singleDrinkItem.idDrink}}" matButton [style]="{'color': config.theme.thirdColor, 'background-color': config.theme.secondaryColor}">
+            <mat-icon aria-hidden="false" aria-label="arrow_forward" fontIcon="arrow_forward"></mat-icon>
+            View More
+          </button>
+          <!-- <button matButton></button> -->
+        </mat-card-actions> 
+      </mat-card>
+    </div>
+    
+  </ng-container>
 </div>

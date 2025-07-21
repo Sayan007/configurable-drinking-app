@@ -2,124 +2,114 @@
   display: flex;
   justify-content: space-evenly;
   // flex-wrap: wrap;
-  margin: 5% 0%;
+  margin: 2% 0%;
   padding: 0% 5%;
+  flex-direction: column;
+}
+
+.back-button{
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 1%;
+  width: 7%;
+  padding: 6px;
+  border-radius: 25px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.inner-content{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1%;
+}
+
+.content-header{
+  display: flex;
+  justify-content: space-between;
 }
 
 .image-container{
   img{
-    width: 350px;
+    width: 100%;
   }
 }
 
+.translation-container{
+  height: 60px;
+}
+
 .drink-details{
-  display: flex;
-  flex-direction: column;
-  flex-grow: 0.7;
-  margin-left: 2%;
-  label.title{
-    font-size: 3em;
-    font-weight: bold;
-    margin-bottom: 1%;
-  }
+  width: 100%;
+  margin: 3% 0% 0% 3%;
+}
+
+.title-container{
+  font-weight: 600;
+  font-size: 2em;
 }
 
 .category-container{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding-top:1%;
-  // justify-content: space-between;
-  
+  align-items: center;
+  margin-top: 2%;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .single-cat-details{
   display: flex;
-  flex-direction: row;
-  justify-content: start;
   align-items: center;
-  margin-right: 2%;
-  min-width: 135px;
-  .type-text{
-    margin-left:1%;
-  }
-  mat-icon{
-    cursor: pointer;
+  cursor: pointer;
+  span.type-text{
+    margin-left: 10px;
   }
 }
 
-.instruction-container{
-  display: flex;
-  flex-wrap: wrap;
-  text-wrap: auto;
-  overflow-wrap: break-word;
-  // text-wrap-style: balance;
-  padding:1%;
-  p{
-    font-size: 20px;
-  }
+.instruction-container, .mixture-details{
+  font-size: 17px;
 }
 
-.title-container{
-  display: flex;
-  justify-content: space-between;
-
-}
-@media only screen and (max-width: 450px) {
-  .instruction-container{
+@media only screen and (max-width: 480px) and (min-width: 320px) {
+  .inner-content{
     display: flex;
-    flex-wrap: wrap;
-    text-wrap: auto;
-    overflow-wrap: break-word;
-    text-wrap-style: balance;
-    padding:1%;
+    // justify-content: space-evenly;
+    flex-direction: column;
+    margin-top:1%;
   }
 
-  .single-cat-details{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    margin-right: 2%;
-    min-width: 130px;
+  .back-button{
+    width: 24%;
+    padding: 10px;
+  }
+
+  .drink-details{
+    width: 100%;
+    margin-left: 0%;
   }
 
   .category-container{
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    padding:1%;
-    // justify-content: space-between;
   }
 
-  .drink-details{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0.7;
-    label.title{
-      font-size: 3em;
-      font-weight: bold;
-      margin-bottom: 3%;
-      margin-top: 6%;
-      height: 80px;
-      line-height: 1;
-      padding: 1%;
+  .title-container{
+    .title{
+      line-height: 30px;
     }
   }
 }
 
-@media only screen and (max-width: 900px) and (min-width: 450px)  {
-  .drink-details{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0.7;
-    label.title{
-      font-size: 3em;
-      font-weight: bold;
-      margin-top: 3%;
-      height: 55px;
-      line-height: 1;
-      padding: 1%;
-    }
+@media only screen and (max-width: 768px) and (min-width: 480px)  {
+  .back-button{
+    width: 11%;
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px)  {
+  .back-button{
+    width: 11%;
+    padding: 10px;
   }
 }
