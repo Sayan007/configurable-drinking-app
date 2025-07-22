@@ -12,7 +12,7 @@
 
 <p align="left">
   The <code>settings.json</code> file looks as follows. It has been described how the configuration is managed.
-  Location of the file <code>src/environments/settings.prod.ts</code> for <strong>production</strong> and <code>src/environments/settings.dev.ts</code> for <strong>development</strong>
+  Location of the file <code>src/settings/settings.prod.ts</code> for <strong>production</strong> and <code>src/settings/settings.dev.ts</code> for <strong>development</strong>
 </p>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
   <pre>
@@ -35,7 +35,8 @@
         copyrightText: String, //Copyright text for the app. ex. "All rights reserved. Copyright year "
         fontFamily: String, //Font-Family for the app. ex. "didot"
         copyrightTextColor: String, //Copyright text color. ex. "black"
-        search: Boolean //Enable or disable search functionality. Default value is false 
+        search: Boolean, //Enable or disable search functionality. Default value is false 
+        typeOfDetailsPage: String, //How the details of the product should be visible. '_blank' for new page, 'dialog' for popup
       }
     }
   </pre>
