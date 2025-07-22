@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { Settings } from '../assets/settings/settings.dev';
+import { Settings } from '../settings/settings.dev';
 import { SettingsModel } from './Settings.model';
 import { Title } from '@angular/platform-browser';
 

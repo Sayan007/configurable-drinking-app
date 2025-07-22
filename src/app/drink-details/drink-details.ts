@@ -2,7 +2,7 @@ import { ChangeDetectorRef, Component, inject, model } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { DrinkDetailsService } from './drink-details.service';
-import { Settings } from '../../assets/settings/settings.dev';
+import { Settings } from '../../settings/settings.dev';
 import { SettingsModel } from '../Settings.model';
 import {
   MAT_DIALOG_DATA,

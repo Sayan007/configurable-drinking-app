@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, Component, ElementRef, inject, ViewChild } from '@angular/core';
-import { Settings } from '../../assets/settings/settings.dev';
+import { Settings } from '../../settings/settings.dev';
 import { DrinkListService } from './drink-list.service';
 import { DrinkListModel } from './drink-list.model';
 import { SettingsModel } from '../Settings.model';
