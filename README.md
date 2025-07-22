@@ -69,4 +69,51 @@
   <p dir="auto">And if it is already installed, then run the following command to publish it</p>
   <pre>npx angular-cli-ghpages --dir=dist/eliq-drinking-app-sayan/browser</pre>
 </div>
-
+<h3 align="left">My Code Base</h3>
+<p dir="auto">
+  Git Repo URL: <a href="https://github.com/Sayan007/eliq-drinking-app-sayan">Eliq Drinking App Sayan</a>
+</p>
+<p dir="auto">
+  GitHub Pages Deployment URL: <a href="https://sayan007.github.io/eliq-drinking-app-sayan/">The Tippler's Guide</a>
+</p>
+<h3 align="left">🛠️ My Configurable Settings</h3>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
+  <pre>
+    {
+      api: "https://www.thecocktaildb.com/api/json/v1/1/",
+      theme: {
+        primaryColor: "black",
+        secondaryColor: "gold",
+        thirdColor: "darkblue",
+        titleColor: "#ffc200"
+      },
+      siteSettings: {
+        logoUrl: "assets/images/logo.svg",
+        logoWidth: "64px",
+        title: "The Tippler's Guide",
+        dateFormat: "dd-MMM-yyyy",
+        currency: "SEK",
+        companyName: "Eliq",
+        copyrightYear: "2025",
+        copyrightText: "All rights reserved by {companyName}. Copyright year ",
+        fontFamily: "Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif",
+        copyrightTextColor: "black",
+        search: true,
+        typeOfDetailsPage: 'dialog'
+      }
+    }
+  </pre>
+</div>
+<h3 align="left">My Approach. Main requirement was - Configurable Approach <i><u>(What, Where, How)</u></i> </h3>
+<p dir="auto">
+  <ul>
+    <li>I used module-based structure(means <code>standalone=false</code>) to achieve lazy-loading.</li>
+    <li>Logo, Title, Page Colour, Accent Colour, Footer Note are configurable. It checks <strong><i>What</i></strong></li>
+    <li>As I didn't need any home page, I redirected my home page to drink-list module.</li>
+    <li>Extra functionalities: Search, responsive design</li>
+    <li>Here, search functionality is configurable. It checks <strong><i>What</i></strong> again.</li>
+    <li>I have created a drink-details module to show details of the drink.</li>
+    <li>This page has been configured in two ways. "Popup" or "Redirect"</li>
+    <li>Here, "Popup" and "Redirect" are configured by <code>typeOfDetailsPage: 'dialog'</code> and <code>typeOfDetailsPage: '_blank'</code> respectively. It checks <strong><i>Where and How</i></strong></li>
+  </ul>
+</p>
