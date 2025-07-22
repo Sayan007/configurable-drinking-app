@@ -11,7 +11,7 @@
 </ul>
 
 <p align="left">
-  The <code>settings.json</code> file looks following. It has been described how the configuration is managed.
+  The <code>settings.json</code> file looks as follows. It has been described how the configuration is managed.
   Location of the file <code>src/environments/settings.prod.ts</code> for <strong>production</strong> and <code>src/environments/settings.dev.ts</code> for <strong>development</strong>
 </p>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
@@ -22,16 +22,16 @@
         primaryColor: String, //Primary Color code. RGB, HEXCODE or NAME. ex. "black"
         secondaryColor: String, //Secondary Color code. RGB, HEXCODE or NAME. ex. "gold"
         thirdColor: String, //Accent Color code. RGB, HEXCODE or NAME. ex. "darkblue"
-        titleColor: //Color code for the title. RGB, HEXCODE or NAME. ex. "ffc200"
+        titleColor: //Colour code for the title. RGB, HEXCODE or NAME. ex. "ffc200"
       },
       siteSettings: {
-        logoUrl: String, //Logo URL. It can be relative url or external url. ex. "assets/images/logo.svg"
+        logoUrl: String, //Logo URL. It can be a relative URL or an external URL. ex. "assets/images/logo.svg"
         logoWidth: String, //Width of the logo. ex. "64px"
         title: String, //Title of name of the app. Which should be visible on header and tab-title. ex. "The Tippler's Guide"
-        dateFormat: String, //Date format, which should be followed through out the app. ex. "dd-MMM-yyyy"
-        currency: String, // Currency for the app. ex. "SEK"
-        companyName: String, //Compnay name to use wherever it is required. ex. "Eliq"
-        copyrightYear: String, //Copyright year. If it is not mentioned, it will fetch current year. ex. "2025"
+        dateFormat: String, //Date format, which should be followed throughout the app. ex. "dd-MMM-yyyy"
+        currency: String, //Currency for the app. ex. "SEK"
+        companyName: String, //Company name to use wherever it is required. ex. "Eliq"
+        copyrightYear: String, //Copyright year. If it is not mentioned, it will fetch the current year. ex. "2025"
         copyrightText: String, //Copyright text for the app. ex. "All rights reserved. Copyright year "
         fontFamily: String, //Font-Family for the app. ex. "didot"
         copyrightTextColor: String, //Copyright text color. ex. "black"
@@ -59,13 +59,13 @@
   <p dir="auto">To build the application for production</p>
   <pre>ng build</pre>
   <p dir="auto">If you want to build for your website. Use the url as <code>--base-href</code></p>
-  <pre>ng build --base-href="https://sayan007.github.io/eliq-drinking-app-sayan"</pre>
+  <pre>ng build --base-href "https://sayan007.github.io/eliq-drinking-app-sayan"</pre>
 </div>
 <h3 align="left">🚀 Deployment process to GitHub Pages </h3>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
-  <p dir="auto">I am using <strong>angular-cli-ghpages</strong> to deploy it. Angular suggests to use this for deployment. For this application, it is already been installed and you can find the entry in <strong>package.json</strong>. But if it is not available in your application, then run following command.</p>
+  <p dir="auto">I am using <strong>angular-cli-ghpages</strong> to deploy it. Angular suggests using this for deployment. For this application, it has already been installed and you can find the entry in <strong>package.json</strong>. But if it is not available in your application, then run the following command.</p>
   <pre>npm add angular-cli-ghpages</pre>
-  <p dir="auto">And if it is already installed, then run following command to publish it</p>
-  <pre>npx deploy --dir=dist/eliq-drinking-app-sayan/browser</pre>
+  <p dir="auto">And if it is already installed, then run the following command to publish it</p>
+  <pre>npx angular-cli-ghpages --dir=dist/eliq-drinking-app-sayan/browser</pre>
 </div>
 
