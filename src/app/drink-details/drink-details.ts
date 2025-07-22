@@ -22,7 +22,7 @@ export class DrinkDetails {
   public config: SettingsModel = Settings;
   public language: string = '';
   public isMobile: boolean = /Android|iPhone/i.test(navigator.userAgent);
-  readonly dialogRef = this.config.siteSettings.typeOfDetailsPage == 'dialog' && inject(MatDialogRef<DrinkDetails>);
+  public dialogRef = this.config.siteSettings.typeOfDetailsPage == 'dialog' && inject(MatDialogRef<DrinkDetails>);
   readonly data = this.config.siteSettings.typeOfDetailsPage == 'dialog' && inject(MAT_DIALOG_DATA);
 
 
@@ -44,5 +44,9 @@ export class DrinkDetails {
         }
       })
     }
+  }
+
+  closeDialog() {
+    this.dialogRef && this.dialogRef.close()
   }
 }

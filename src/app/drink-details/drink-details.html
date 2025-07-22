@@ -1,8 +1,12 @@
 <div class="content" [style]="{'font-family': config.siteSettings.fontFamily}">
-  <div class="content-header" [style]="{'justify-content': config.siteSettings.typeOfDetailsPage == 'dialog' && 'end'}">
+  <div class="content-header" >
     <div class="back-button" [style]="{'background-color': config.theme.secondaryColor}" *ngIf="config.siteSettings.typeOfDetailsPage == '_blank'">
       <mat-icon aria-hidden="false" routerLink="/drink-list" aria-label="arrow_backward" fontIcon="arrow_backward"></mat-icon>
       <span routerLink="/drink-list">Go Back</span>
+    </div>
+    <div class="back-button" [style]="{'background-color': config.theme.secondaryColor}" *ngIf="config.siteSettings.typeOfDetailsPage == 'dialog'">
+      <mat-icon aria-hidden="false" (click)="closeDialog()" aria-label="close" fontIcon="close"></mat-icon>
+      <span (click)="closeDialog()">Close</span>
     </div>
     <div class="translation-container">
       <mat-form-field>
