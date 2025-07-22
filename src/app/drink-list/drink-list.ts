@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { Settings } from '../../settings/settings.dev';
 import { DrinkListService } from './drink-list.service';
 import { DrinkListModel } from './drink-list.model';
