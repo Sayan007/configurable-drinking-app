@@ -18,6 +18,6 @@ export const Settings = {
     fontFamily: "Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif",
     copyrightTextColor: "black",
     search: true,
-    typeOfDetailsPage: 'dialog'
+    typeOfDetailsPage: '_blank'
   }
 }
