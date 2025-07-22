@@ -1,59 +1,71 @@
-# EliqDinkingAppSayan
+<h1 align="left">Eliq Drinking App By Sayan</h1>
+<h4 align="left">This has been developed in a WLA (White-Label App) approach where it can be branded by a <code>settings.json</code> file. This file is an instruction file which tells the app what/where/how to populate the UI elements. It has been deployed and find it <a href="https://sayan007.github.io/eliq-drinking-app-sayan/" target="_blank">here</a></h4>
+<h3 align="left">Technologies used to implement the app - </h3>
+<ul>
+  <li>Angular v20</li>
+  <li>TypeScript</li>
+  <li>JavaScript</li>
+  <li>Material UI</li>
+  <li>HTML</li>
+  <li>CSS</li>
+</ul>
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.1.
+<p align="left">
+  The <code>settings.json</code> file looks following. It has been described how the configuration is managed.
+  Location of the file <code>src/environments/settings.prod.ts</code> for <strong>production</strong> and <code>src/environments/settings.dev.ts</code> for <strong>development</strong>
+</p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
+  <pre>
+    {
+      api: String, //The API Url
+      theme: {
+        primaryColor: String, //Primary Color code. RGB, HEXCODE or NAME. ex. "black"
+        secondaryColor: String, //Secondary Color code. RGB, HEXCODE or NAME. ex. "gold"
+        thirdColor: String, //Accent Color code. RGB, HEXCODE or NAME. ex. "darkblue"
+        titleColor: //Color code for the title. RGB, HEXCODE or NAME. ex. "ffc200"
+      },
+      siteSettings: {
+        logoUrl: String, //Logo URL. It can be relative url or external url. ex. "assets/images/logo.svg"
+        logoWidth: String, //Width of the logo. ex. "64px"
+        title: String, //Title of name of the app. Which should be visible on header and tab-title. ex. "The Tippler's Guide"
+        dateFormat: String, //Date format, which should be followed through out the app. ex. "dd-MMM-yyyy"
+        currency: String, // Currency for the app. ex. "SEK"
+        companyName: String, //Compnay name to use wherever it is required. ex. "Eliq"
+        copyrightYear: String, //Copyright year. If it is not mentioned, it will fetch current year. ex. "2025"
+        copyrightText: String, //Copyright text for the app. ex. "All rights reserved. Copyright year "
+        fontFamily: String, //Font-Family for the app. ex. "didot"
+        copyrightTextColor: String, //Copyright text color. ex. "black"
+        search: Boolean //Enable or disable search functionality. Default value is false 
+      }
+    }
+  </pre>
+</div>
+<h3 align="left">🛠️ Setup process for local environment </h3>
+<p>Make sure latest <strong>Node LTS Version (22.x)</strong> is installed in your system</p>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
+  <p dir="auto">Install Angular CLI</p>
+  <pre>npm install -g @angular/cli</pre>
+  <p dir="auto">Clone the repository</p>
+  <pre>git clone https://github.com/Sayan007/eliq-drinking-app-sayan.git</pre>
+  <p dir="auto">Open command prompt and navigate to the project directory</p>
+  <pre>cd eliq-drinking-app-sayan</pre>
+  <p dir="auto">Install dependencies</p>
+  <pre>npm install</pre>
+  <p dir="auto">To serve it locally, execute</p>
+  <pre>ng serve</pre>
+</div>
+<h3 align="left">🛠️ Build process for production environment </h3>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
+  <p dir="auto">To build the application for production</p>
+  <pre>ng build</pre>
+  <p dir="auto">If you want to build for your website. Use the url as <code>--base-href</code></p>
+  <pre>ng build --base-href="https://sayan007.github.io/eliq-drinking-app-sayan"</pre>
+</div>
+<h3 align="left">🚀 Deployment process to GitHub Pages </h3>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
+  <p dir="auto">I am using <strong>angular-cli-ghpages</strong> to deploy it. Angular suggests to use this for deployment. For this application, it is already been installed and you can find the entry in <strong>package.json</strong>. But if it is not available in your application, then run following command.</p>
+  <pre>npm add angular-cli-ghpages</pre>
+  <p dir="auto">And if it is already installed, then run following command to publish it</p>
+  <pre>npx deploy --dir=dist/eliq-drinking-app-sayan/browser</pre>
+</div>
 
-## Development server
-
-To start a local development server, run:
-
-```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
