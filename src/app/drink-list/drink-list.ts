@@ -1,9 +1,11 @@
-import { ChangeDetectorRef, Component, inject } from '@angular/core';
-import { Settings } from '../../environments/settings.dev';
+import { ChangeDetectorRef, Component, ElementRef, inject, ViewChild } from '@angular/core';
+import { Settings } from '../../assets/settings/settings.dev';
 import { DrinkListService } from './drink-list.service';
 import { DrinkListModel } from './drink-list.model';
 import { SettingsModel } from '../Settings.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
+import { DrinkDetails } from '../drink-details/drink-details';
 
 @Component({
   selector: 'app-drink-list',
@@ -16,6 +18,7 @@ export class DrinkList {
   public config: SettingsModel = Settings;
   private snackBar = inject(MatSnackBar);
   public searchTerm: string = '';
+  readonly dialog = inject(MatDialog);
 
   constructor(private drinkListService: DrinkListService, private cdr: ChangeDetectorRef) { }
 
@@ -32,5 +35,13 @@ export class DrinkList {
         console.log('Completed')
       }
     })
+  }
+
+  openPopup(drinkId: string) {
+    const dialogRef = this.dialog.open(DrinkDetails, {
+      data: { id: drinkId },
+      maxHeight: '100%',
+      maxWidth: '100%'
+    });
   }
 }

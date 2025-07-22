@@ -38,8 +38,8 @@
           "configurations": {
             "production": {
               "fileReplacements": [{
-                "replace": "src/environments/settings.dev.ts",
-                "with": "src/environments/settings.prod.ts"
+                "replace": "src/assets/settings/settings.dev.ts",
+                "with": "src/assets/settings/settings.prod.ts"
               }],
               "budgets": [
                 {

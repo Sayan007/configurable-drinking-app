@@ -1,18 +1,18 @@
-<div class="content">
-  <div class="content-header">
-    <div class="back-button" [style]="{'background-color': config.theme.secondaryColor}">
+<div class="content" [style]="{'font-family': config.siteSettings.fontFamily}">
+  <div class="content-header" [style]="{'justify-content': config.siteSettings.typeOfDetailsPage == 'dialog' && 'end'}">
+    <div class="back-button" [style]="{'background-color': config.theme.secondaryColor}" *ngIf="config.siteSettings.typeOfDetailsPage == '_blank'">
       <mat-icon aria-hidden="false" routerLink="/drink-list" aria-label="arrow_backward" fontIcon="arrow_backward"></mat-icon>
       <span routerLink="/drink-list">Go Back</span>
     </div>
     <div class="translation-container">
       <mat-form-field>
-        <mat-label>Select Language</mat-label>
-        <mat-select [(value)]="language">
+        <mat-label [style]="{'font-family': config.siteSettings.fontFamily}">Select Language</mat-label>
+        <mat-select [(value)]="language" [style]="{'font-family': config.siteSettings.fontFamily}">
           <mat-option [value]="''">English</mat-option>
-          <mat-option [value]="'DE'">German</mat-option>
-          <mat-option [value]="'ES'">Spanish</mat-option>
-          <mat-option [value]="'FR'">French</mat-option>
-          <mat-option [value]="'IT'">Italian</mat-option>
+          <mat-option *ngIf="drinkDetails['strInstructionsDE']" [value]="'DE'">German</mat-option>
+          <mat-option *ngIf="drinkDetails['strInstructionsES']" [value]="'ES'">Spanish</mat-option>
+          <mat-option *ngIf="drinkDetails['strInstructionsFR']" [value]="'FR'">French</mat-option>
+          <mat-option *ngIf="drinkDetails['strInstructionsIT']" [value]="'IT'">Italian</mat-option>
         </mat-select>
       </mat-form-field>
     </div>

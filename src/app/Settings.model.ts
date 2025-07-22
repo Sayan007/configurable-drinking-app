@@ -21,4 +21,5 @@ interface SiteSettings {
   fontFamily: string;
   copyrightTextColor: string;
   search: boolean;
+  typeOfDetailsPage: string;
 }

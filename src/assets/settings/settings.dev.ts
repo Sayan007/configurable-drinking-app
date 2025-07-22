@@ -14,9 +14,10 @@ export const Settings = {
     currency: "SEK",
     companyName: "Eliq",
     copyrightYear: "2025",
-    copyrightText: "All rights reserved. Copyright year ",
-    fontFamily: "didot",
+    copyrightText: "All rights reserved by {companyName}. Copyright year ",
+    fontFamily: "Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif",
     copyrightTextColor: "black",
-    search: true
+    search: true,
+    typeOfDetailsPage: 'dialog'
   }
 }

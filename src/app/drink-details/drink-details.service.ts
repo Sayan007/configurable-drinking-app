@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Settings } from '../../environments/settings.dev';
+import { Settings } from '../../assets/settings/settings.dev';
 import { Observable } from 'rxjs';
 
 @Injectable({
