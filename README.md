@@ -93,7 +93,7 @@
         title: "The Tippler's Guide",
         dateFormat: "dd-MMM-yyyy",
         currency: "SEK",
-        companyName: "Eliq",
+        companyName: "SAYAN",
         copyrightYear: "2025",
         copyrightText: "All rights reserved by {companyName}. Copyright year ",
         fontFamily: "Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif",
