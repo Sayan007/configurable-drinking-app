@@ -22,7 +22,7 @@
         primaryColor: String, //Primary Color code. RGB, HEXCODE or NAME. ex. "black"
         secondaryColor: String, //Secondary Color code. RGB, HEXCODE or NAME. ex. "gold"
         thirdColor: String, //Accent Color code. RGB, HEXCODE or NAME. ex. "darkblue"
-        titleColor: //Colour code for the title. RGB, HEXCODE or NAME. ex. "ffc200"
+        titleColor: String, //Colour code for the title. RGB, HEXCODE or NAME. ex. "ffc200"
       },
       siteSettings: {
         logoUrl: String, //Logo URL. It can be a relative URL or an external URL. ex. "assets/images/logo.svg"
@@ -70,9 +70,9 @@
   <pre>npx angular-cli-ghpages --dir=dist/eliq-drinking-app-sayan/browser</pre>
 </div>
 <h3 align="left">My Code Base</h3>
-<p dir="auto">
+<!--p dir="auto">
   Git Repo URL: <a href="https://github.com/Sayan007/eliq-drinking-app-sayan">Eliq Drinking App Sayan</a>
-</p>
+</p--!>
 <p dir="auto">
   GitHub Pages Deployment URL: <a href="https://sayan007.github.io/eliq-drinking-app-sayan/">The Tippler's Guide</a>
 </p>
@@ -115,5 +115,6 @@
     <li>I have created a drink-details module to show details of the drink.</li>
     <li>This page has been configured in two ways. "Popup" or "Redirect"</li>
     <li>Here, "Popup" and "Redirect" are configured by <code>typeOfDetailsPage: 'dialog'</code> and <code>typeOfDetailsPage: '_blank'</code> respectively. It checks <strong><i>Where and How</i></strong></li>
+    <li>Extra functionalities: Dynamic translations in details page.</li>
   </ul>
 </p>
