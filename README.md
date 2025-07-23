@@ -47,7 +47,7 @@
   <p dir="auto">Install Angular CLI</p>
   <pre>npm install -g @angular/cli</pre>
   <p dir="auto">Clone the repository</p>
-  <pre>git clone https://github.com/Sayan007/eliq-drinking-app-sayan.git</pre>
+  <pre>git clone https://github.com/Sayan007/configurable-drinking-app.git</pre>
   <p dir="auto">Open command prompt and navigate to the project directory</p>
   <pre>cd eliq-drinking-app-sayan</pre>
   <p dir="auto">Install dependencies</p>
