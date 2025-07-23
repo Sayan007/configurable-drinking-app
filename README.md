@@ -1,5 +1,5 @@
 <h1 align="left">Eliq Drinking App By Sayan</h1>
-<h4 align="left">This has been developed in a WLA (White-Label App) approach where it can be branded by a <code>settings.json</code> file. This file is an instruction file which tells the app what/where/how to populate the UI elements. <!--It has been deployed and find it <a href="https://sayan007.github.io/configurable-drinking-app/" target="_blank">here</a--!></h4>
+<h4 align="left">This has been developed in a WLA (White-Label App) approach where it can be branded by a <code>settings.json</code> file. This file is an instruction file which tells the app what/where/how to populate the UI elements. It has been deployed and find it <a href="https://sayan007.github.io/configurable-drinking-app/" target="_blank">here</a></h4>
 <h3 align="left">Technologies used to implement the app - </h3>
 <ul>
   <li>Angular v20</li>
@@ -70,12 +70,12 @@
   <pre>npx angular-cli-ghpages --dir=dist/configurable-drinking-app/browser</pre>
 </div>
 <h3 align="left">My Code Base</h3>
-<!--p dir="auto">
-  Git Repo URL: <a href="https://github.com/Sayan007/configurable-drinking-app">Eliq Drinking App Sayan</a>
-</p--!>
-<!--p dir="auto">
+<p dir="auto">
+  Git Repo URL: <a href="https://github.com/Sayan007/configurable-drinking-app">Configurable Drinking App</a>
+</p>
+<p dir="auto">
   GitHub Pages Deployment URL: <a href="https://sayan007.github.io/configurable-drinking-app/">The Tippler's Guide</a>
-</p--!>
+</p>
 <h3 align="left">🛠️ My Configurable Settings</h3>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
   <pre>
@@ -93,7 +93,7 @@
         title: "The Tippler's Guide",
         dateFormat: "dd-MMM-yyyy",
         currency: "SEK",
-        companyName: "SAYAN",
+        companyName: "Sayan",
         copyrightYear: "2025",
         copyrightText: "All rights reserved by {companyName}. Copyright year ",
         fontFamily: "Candara, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif",
