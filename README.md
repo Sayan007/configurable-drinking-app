@@ -60,22 +60,22 @@
   <p dir="auto">To build the application for production</p>
   <pre>ng build</pre>
   <p dir="auto">If you want to build for your website. Use the url as <code>--base-href</code></p>
-  <pre>ng build --base-href "https://sayan007.github.io/eliq-drinking-app-sayan"</pre>
+  <pre>ng build --base-href "https://sayan007.github.io/configurable-drinking-app"</pre>
 </div>
 <h3 align="left">🚀 Deployment process to GitHub Pages </h3>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
   <p dir="auto">I am using <strong>angular-cli-ghpages</strong> to deploy it. Angular suggests using this for deployment. For this application, it has already been installed and you can find the entry in <strong>package.json</strong>. But if it is not available in your application, then run the following command.</p>
   <pre>npm add angular-cli-ghpages</pre>
   <p dir="auto">And if it is already installed, then run the following command to publish it</p>
-  <pre>npx angular-cli-ghpages --dir=dist/eliq-drinking-app-sayan/browser</pre>
+  <pre>npx angular-cli-ghpages --dir=dist/configurable-drinking-app/browser</pre>
 </div>
 <h3 align="left">My Code Base</h3>
 <!--p dir="auto">
-  Git Repo URL: <a href="https://github.com/Sayan007/eliq-drinking-app-sayan">Eliq Drinking App Sayan</a>
+  Git Repo URL: <a href="https://github.com/Sayan007/configurable-drinking-app">Eliq Drinking App Sayan</a>
 </p--!>
-<p dir="auto">
-  GitHub Pages Deployment URL: <a href="https://sayan007.github.io/eliq-drinking-app-sayan/">The Tippler's Guide</a>
-</p>
+<!--p dir="auto">
+  GitHub Pages Deployment URL: <a href="https://sayan007.github.io/configurable-drinking-app/">The Tippler's Guide</a>
+</p--!>
 <h3 align="left">🛠️ My Configurable Settings</h3>
 <div class="highlight highlight-source-shell notranslate position-relative overflow-auto">
   <pre>
