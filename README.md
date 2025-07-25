@@ -49,7 +49,7 @@
   <p dir="auto">Clone the repository</p>
   <pre>git clone https://github.com/Sayan007/configurable-drinking-app.git</pre>
   <p dir="auto">Open command prompt and navigate to the project directory</p>
-  <pre>cd eliq-drinking-app-sayan</pre>
+  <pre>cd configurable-drinking-app</pre>
   <p dir="auto">Install dependencies</p>
   <pre>npm install</pre>
   <p dir="auto">To serve it locally, execute</p>
