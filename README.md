@@ -1,4 +1,4 @@
-<h1 align="left">Eliq Drinking App By Sayan</h1>
+<h1 align="left">Configurable Drinking App By Sayan</h1>
 <h4 align="left">This has been developed in a WLA (White-Label App) approach where it can be branded by a <code>settings.json</code> file. This file is an instruction file which tells the app what/where/how to populate the UI elements. It has been deployed and find it <a href="https://sayan007.github.io/configurable-drinking-app/" target="_blank">here</a></h4>
 <h3 align="left">Technologies used to implement the app - </h3>
 <ul>
